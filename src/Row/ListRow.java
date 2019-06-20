@@ -20,4 +20,15 @@ public class ListRow {
         return (inicio == null);
     }
 
+    public void printRow(){
+        Node route = inicio;
+        if (inicio == null){
+            System.out.println("Nothing to show");
+        }else {
+            while (route != null){
+                System.out.println(route.getData());
+                route = route.getNext();
+            }
+        }
+    }
 }
