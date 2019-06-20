@@ -31,4 +31,21 @@ public class ListRow {
             }
         }
     }
+
+    public void deleteRow(){
+        Node route = inicio;
+        Node aux = null;
+        if(isEmpty()){
+            System.out.println("nothing to show");
+        }else if (inicio.getNext() == null){
+            inicio = null;
+        }else {
+            while (route.getNext() != null){
+                aux = route;
+                route = route.getNext();
+            }
+            aux.setNext(null);
+        }
+
+    }
 }
