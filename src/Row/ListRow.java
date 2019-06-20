@@ -21,7 +21,7 @@ public class ListRow {
     }
 
     public void printRow(){
-        Node route = inicio;
+         Node route = inicio;
         if (inicio == null){
             System.out.println("Nothing to show");
         }else {
@@ -46,6 +46,18 @@ public class ListRow {
             }
             aux.setNext(null);
         }
-
     }
+
+    public void searchNode(String name){
+        Node route = inicio;
+        while (route != null){
+            if (route.getData().compareTo(name) == 0){
+                System.out.println("Found");
+                break;
+            }else {
+                route = route.getNext();
+            }
+        }
+    }
+
 }
